@@ -4,8 +4,17 @@
 }
 body{
     background-color: #252525;
+    font-family: 'Lexend Tera', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 90px;
+    letter-spacing: 20px;
 }
 .contenedor{
     padding: 10px 30px;
     align-items: center;
+}
+.contenedor h1{
+    color: red;
+    text-shadow: 10px 10px rgba(255, 255, 255, 0.486);
 }

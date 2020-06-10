@@ -11,6 +11,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://lxrd17.github.io/vacaciones202002/assets/img/bg5.png" type="image/x-icon">
     <link rel='stylesheet' type='text/css' media='screen' href='./style.css'>
+    <script>
+    $(document).ready(function(){
+ loadPage();
+});
+function loadPage(url) {
+ $('body').append('<div id="progress">Loading...</div>');
+ if (url == undefined) {
+ $('body').load('index.html', hijackLinks);
+ } else {
+ $('body').load(url + ' #content', hijackLinks);
+ }
+}
+function hijackLinks() {
+ $('#topnav').click(function(e){
+ e.preventDefault();
+ loadPage(e.target.href);
+34 | Chapter 3: Advanced iPhone Styling
+ });
+ $('#progress').remove();
+}
+See 
+    </script>
 </head>
 <body>
     <div class="topnav" id="myTopnav">
